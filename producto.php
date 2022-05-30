@@ -77,7 +77,82 @@ if (mysqli_connect_errno()) {
     </main>
   <?php
   }
-  
+  if (isset($_POST['sedan'])) {
+    $sedan = mysqli_query($con, "SELECT * FROM `catalogo_carros` WHERE TipoCarro = 'Sedan'");
+
+  ?>
+    <main class="contenedor sombra animate__animated animate__slideInRight">
+      <h2>Caf&eacute; en sedan tostado.</h2>
+      <div class="btn alinear-centro flex">
+        <div class="nuestro-cafe">
+          <?php while ($row = mysqli_fetch_array($sedan)) tabla($row); ?>
+        </div>
+      </div>
+      <div class="btn alinear-derecha flex">
+        <form action="productos.html" method="post">
+          <input class="boton w-small-100" type="submit" name="regresa" value="Regresar.">
+        </form>
+      </div>
+    </main>
+  <?php
+  }
+  if (isset($_POST['camioneta'])) {
+    $camioneta = mysqli_query($con, "SELECT * FROM `catalogo_carros` WHERE TipoCarro = 'Camioneta'");
+
+  ?>
+    <main class="contenedor sombra animate__animated animate__slideInRight">
+      <h2>Camionetas para uso rudo.</h2>
+      <div class="btn alinear-centro flex">
+        <div class="nuestro-cafe">
+          <?php while ($row = mysqli_fetch_array($camioneta)) tabla($row); ?>
+        </div>
+      </div>
+      <div class="btn alinear-derecha flex">
+        <form action="productos.html" method="post">
+          <input class="boton w-small-100" type="submit" name="regresa" value="Regresar.">
+        </form>
+      </div>
+    </main>
+  <?php
+  }
+  if (isset($_POST['coupe'])) {
+    $coupe = mysqli_query($con, "SELECT * FROM `catalogo_carros` WHERE TipoCarro = 'Coupe'");
+  ?>
+    <main class="contenedor sombra animate__animated animate__slideInRight">
+      <h2>Nuestros coupes para disfrutar.</h2>
+      <div class="btn alinear-centro flex">
+        <div class="nuestro-cafe">
+          <?php while ($row = mysqli_fetch_array($coupe)) tabla($row); ?>
+        </div>
+      </div>
+      <div class="btn alinear-derecha flex">
+        <form action="productos.html" method="post">
+          <input class="boton w-small-100" type="submit" name="regresa" value="Regresar.">
+        </form>
+      </div>
+    </main>
+  <?php
+  }
+  if (isset($_POST['exoticos'])) {
+    $exotico = mysqli_query($con, "SELECT * FROM `catalogo_carros` WHERE TipoCarro = 'Exotico'");
+  ?>
+    <main class="contenedor sombra animate__animated animate__slideInRight">
+      <h2>Nuestros exoticos con maximo performance.</h2>
+      <div class="btn alinear-centro flex">
+        <div class="nuestro-cafe">
+          <?php while ($row = mysqli_fetch_array($exotico)) tabla($row); ?>
+        </div>
+      </div>
+      <div class="btn alinear-derecha flex">
+        <form action="productos.html" method="post">
+          <input class="boton w-small-100" type="submit" name="regresa" value="Regresar.">
+        </form>
+      </div>
+    </main>
+  <?php
+  }
+  ?>
+  </table>
   <?php
   mysqli_close($con);
   ?>
