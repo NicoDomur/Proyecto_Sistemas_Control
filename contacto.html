@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="preload" href="normalize.css" as="style">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mali:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+    <div class = "nav-fijo">
+        <div class = iconos-movil>
+                <i id="botonMenu" class="fas fa-bars"></i>
+        </div>
+            <nav class="nav-principal contenedor" id="navPrincipal">
+                <a href="index.html">Inicio</a>
+                <a href="productos.html">Nuestros Productos</a>
+                <a href="#">Sobre Nosotros</a>
+                <a href="contacto.html">Contacto</a>
+                <a href="login.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                        <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path>
+                     </svg>
+                </a>
+            </nav>
+    </div>
+    <section class="contacto animate__animated animate__fadeInUp">
+        <h2>Contacto</h2>
+
+        <p>Siguenos en nuestras redes sociales.</p>
+
+        
+
+        <form class="formulario">
+            <fieldset>
+
+                <legend>Introduce tus datos para ponerme en contacto contigo.</legend>
+
+                <div class="contenedor-campos">
+                    <div class="campo">
+                        <label>Nombre <input class="input-text" type="text" placeholder="Nombre"></label>
+                    </div>
+
+                    <div class="campo">
+                        <label>T&eacute;lefono <input class="input-text" type="tel" placeholder="Télefono"></label>
+                    </div>
+
+                    <div class="campo">
+                        <label>Correo <input class="input-text" type="email" placeholder="E-mail"></label>
+                    </div>
+
+                    <div class="campo">
+                        <label>Mensaje <textarea class="input-text"></textarea></label>
+                    </div>
+                </div> <!--.contenedor-campos-->
+
+                <div class="btn alinear-derecha flex">
+                    <input class="boton w-small-100" type="submit" value="Enviar">
+                </div>
+            </fieldset>
+        </form>
+    </section>
+<script src="js/menu.js"></script>
+<footer class="footer">
+    <p>Todos los derechos reservados Nicol&aacute;s Dom&iacute;nguez Urrea</p>
+</footer>
+</body>
+</html>
