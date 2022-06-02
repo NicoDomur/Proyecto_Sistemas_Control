@@ -19,3 +19,21 @@ $query = mysqli_query($con, $sql);
 
 echo $sql;
 
+if($row = mysqli_fetch_array($query)){
+  echo "Entre al if xd";
+  if($row['PassUsuario'] == $contrasena){
+    session_start();
+    $_SESSION['nombre'] = $nombre;
+    header("Location: admin.php");
+  }else{
+    echo '<script> alert("Credenciales incorrectas."); window.location.href="login.html"; </script>';
+    //header("Location: login.html");
+    exit();
+  }
+}else{
+  echo '<script> alert("Credenciales incorrectas."); window.location.href="login.html"; </script>';
+    //header("Location: login.html");
+  exit();
+}
+
+?>
